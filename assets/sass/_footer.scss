@@ -1,0 +1,44 @@
+footer {
+    background-color: $footer;
+    @include rem-fallback(padding-top, 70px/16px);
+    @include rem-fallback(padding-bottom, 70px/16px);
+    @media (max-width: 991.98px) {
+        background-color: $primary;
+    }
+    .title {
+        text-transform: uppercase;
+        @include rem-fallback(font-size, 16px/16px);
+        color: white;
+        font-family: $primary-font;
+        font-weight: 700;
+        @include rem-fallback(margin-bottom, 20px/16px);
+    }
+    li {
+        @include rem-fallback(margin-bottom, 15px/16px);
+    }
+    a {
+        @include rem-fallback(font-size, 16px/16px);
+        color: white;
+        font-family: $primary-font;
+        font-weight: 300;
+        &:hover {
+            color: $secondary;
+        }
+    }
+    .combo {
+        img {
+            width: 20px;
+        }
+    }
+}
+
+.footer-copy {
+    background-color: $footer-copy;
+    @include rem-fallback(padding-top, 15px/16px);
+    @include rem-fallback(padding-bottom, 15px/16px);
+    p {
+        color: white;
+        font-family: $secondary-font;
+        @include rem-fallback(font-size, 12px/16px);
+    }
+}

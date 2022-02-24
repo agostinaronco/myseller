@@ -1,0 +1,54 @@
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+    $max: length($values);
+    $pxValues: '';
+    $remValues: '';
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $pxValues: #{$pxValues + $value*16}px;
+        @if $i < $max {
+            $pxValues: #{$pxValues + " "};
+        }
+    }
+    @for $i from 1 through $max {
+        $value: strip-unit(nth($values, $i));
+        $remValues: #{$remValues + $value}rem;
+        @if $i < $max {
+            $remValues: #{$remValues + " "};
+        }
+    }
+    #{$property}: $pxValues;
+    #{$property}: $remValues;
+}
+
+@mixin animationMix($name, $duration, $ease, $state) {
+    -webkit-animation: $name $duration $ease $state;
+    -moz-animation: $name $duration $ease $state;
+    -o-animation: $name $duration $ease $state;
+    animation: $name $duration $ease $state;
+}
+
+@mixin transitionMix($to, $duration, $ease) {
+    -webkit-transition: $to $duration $ease;
+    -moz-transition: $to $duration $ease;
+    -o-transition: $to $duration $ease;
+    transition: $to $duration $ease;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
