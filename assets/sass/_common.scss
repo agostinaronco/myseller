@@ -97,7 +97,7 @@ b {
 
 .navbar {
     background-color: $nav;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
     @include rem-fallback(padding-top, 30px/16px);
     @include rem-fallback(padding-bottom, 30px/16px);
     @include transitionMix(all, 0.2s, linear);
@@ -878,8 +878,21 @@ header {
     background-size: cover;
     display: flex;
     align-items: center;
+    position: relative;
+    .bg-color {
+        background-color: $primary;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 67%;
+        opacity: 0.8;
+    }
     @media (max-width: 1199.98px) {
         background-image: url(../images/contacto-md.jpg);
+        .bg-color {
+            display: none;
+        }
     }
     @media (max-width: 575.98px) {
         background-image: url(../images/contacto-m.jpg);
@@ -959,6 +972,7 @@ header {
             @include rem-fallback(padding,
             10px/16px,
             25px/16px);
+            background-color: transparent;
             @media (max-width: 991.98px) {
                 @include rem-fallback(padding, 12px/16px, 28px/16px);
                 @include rem-fallback(margin-top,
