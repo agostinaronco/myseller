@@ -158,12 +158,6 @@ b {
         @media (max-width: 1400px) {
             @include rem-fallback(margin, 15px/16px, 0);
         }
-        &.active {
-            .nav-link {
-                color: $secondary;
-                font-weight: 700;
-            }
-        }
         &.nav-item__contacto {
             border-radius: 50px;
             background-color: $secondary;
@@ -237,6 +231,11 @@ b {
     }
 }
 
+.nav-link.active {
+    color: $secondary;
+    font-weight: 700;
+}
+
 header {
     height: 100vh;
     background-color: black;
@@ -289,6 +288,11 @@ header {
 .flex-slider {
     width: 100%;
     position: absolute;
+    li {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
     .slides {
         list-style: none;
         overflow: hidden;

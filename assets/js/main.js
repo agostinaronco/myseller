@@ -13,12 +13,35 @@ $(document).ready(function() {
         $('.flex-slider').flexslider({
             slideshow: true,
             slideshowSpeed: 5000,
-            animationSpeed: 1000,
+            animationSpeed: 2000,
             controlNav: false,
             pauseOnAction: true,
             after: function(slider) {
                 if (!slider.playing) {
                     slider.play();
+                }
+            }
+        });
+    })();
+
+    //slider modulo6
+    (function() {
+        $(".logoslider").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            items: 5,
+            responsive: {
+                0: {
+                    items: 3,
+                },
+                900: {
+                    items: 4,
+                },
+                1100: {
+                    items: 5,
                 }
             }
         });
@@ -50,6 +73,25 @@ $(document).ready(function() {
         })
     })();
 
+
+    //nav set active on scroll   
+    (function() {
+        var navNodes = $(".nav-link");
+        $('.mark-nav').viewportChecker({
+            repeat: true,
+            classToAdd: "active-nav",
+            callbackFunction: function(elem, action) {
+                var currentElement = $(elem)
+                var currentElementId = currentElement[0].id;
+                $('.nav-link').removeClass("active");
+                for (var i = 0; i < navNodes.length; i++) {
+                    if (navNodes[i].hash === "#" + currentElementId) {
+                        $('[data-nav=' + currentElementId + ']').addClass("active");
+                    }
+                }
+            }
+        });
+    })();
 
     //site animations    
     (function() {

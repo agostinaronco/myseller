@@ -9,6 +9,7 @@
     <link rel="icon" href="assets/images/favicon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/main.min.css">
 
 </head>
@@ -26,19 +27,19 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#home" data-nav="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#upgrade">Tu Upgrade</a>
+                        <a class="nav-link" href="#upgrade" data-nav="upgrade">Tu Upgrade</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#soluciones">Nuestras Soluciones</a>
+                        <a class="nav-link" href="#soluciones " data-nav="soluciones">Nuestras Soluciones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#mundo">MySeller en el mundo</a>
+                        <a class="nav-link" href="#mundo" data-nav="mundo">MySeller en el mundo</a>
                     </li>
                     <li class="nav-item nav-item__contacto">
-                        <a class="nav-link" href="#contacto">
+                        <a class="nav-link" href="#contacto" data-nav="contacto">
                             <span class="d-none d-lg-block">Contacto</span>
                             <span class="d-lg-none">¡Quiero un Upgrade!</span>
                         </a>
@@ -52,28 +53,44 @@
             </div>
         </div>
     </nav>
-    <header>
+    <header class="mark-nav" id="home">
         <div class="flex-slider">
             <ul class="slides">
                 <li>
                     <div class="slide-image" data-bg="assets/images/header1.jpg" data-flex-start="center center"></div>
+                    <div class="container text-center">
+                        <h1 class="check" data-animation="animate__fadeIn">El Software que integra toda la gestión <br> de tu empresa con tu ecommerce.</h1>
+                        <p class="check" data-animation="animate__fadeIn">MySeller es la herramienta que te permite expandir tu negocio online.</p>
+                        <a href="#contacto" class="btn-round check" data-animation="animate__fadeInUp"> <span>¡Quiero un Upgrade!</span> </a>
+                    </div>
                 </li>
                 <li>
                     <div class="slide-image" data-bg="assets/images/header2.jpg" data-flex-start="center center"></div>
+                    <div class="container text-center">
+                        <h1>Título 2.</h1>
+                        <p>MySeller es genial.</p>
+                        <a href="#contacto" class="btn-round check" data-animation="animate__fadeInUp"> <span>¡Quiero un Upgrade!</span> </a>
+                    </div>
                 </li>
                 <li>
                     <div class="slide-image" data-bg="assets/images/header3.jpg" data-flex-start="center center"></div>
+                    <div class="container text-center">
+                        <h1>Título 3.</h1>
+                        <p>MySeller es asombroso. <br>MySeller es asombroso MySeller es asombroso</p>
+                        <a href="#contacto" class="btn-round check" data-animation="animate__fadeInUp"> <span>¡Quiero un Upgrade!</span> </a>
+                    </div>
                 </li>
                 <li>
                     <div class="slide-image" data-bg="assets/images/header4.jpg" data-flex-start="center center"></div>
+                    <div class="container text-center">
+                        <h1>Título 4 <br> sigue aca.</h1>
+                        <p>Adquirí nuestros servicios.</p>
+                        <a href="#contacto" class="btn-round check" data-animation="animate__fadeInUp"> <span>¡Quiero un Upgrade!</span> </a>
+                    </div>
                 </li>
             </ul>
         </div>
-        <div class="container text-center">
-            <h1 class="check" data-animation="animate__fadeIn">El Software que integra toda la gestión <br> de tu empresa con tu ecommerce.</h1>
-            <p class="check" data-animation="animate__fadeIn">MySeller es la herramienta que te permite expandir tu negocio online.</p>
-            <a href="#contacto" class="btn-round check" data-animation="animate__fadeInUp"> <span>¡Quiero un Upgrade!</span> </a>
-        </div>
+
         <a href="" class="wsp">
             <img src="assets/images/wsp.svg" alt="">
         </a>
@@ -83,7 +100,7 @@
     <section class="modulo1">
         <div class="container modulo1-cards_wrapper">
             <div class="row">
-                <div class="col-12 col-lg-11 col-xl-9 ml-auto mr-auto modulo1-cards" id="upgrade">
+                <div class="col-12 col-lg-11 col-xl-9 ml-auto mr-auto modulo1-cards mark-nav" id="upgrade" data-nav="upgrade">
                     <div class="row">
                         <div class="col-12 col-lg-4">
                             <div class=" cards cards-1">
@@ -170,7 +187,7 @@
         </div>
     </section>
 
-    <section class="modulo3" id="soluciones">
+    <section class="modulo3 mark-nav" id="soluciones">
         <div class="modulo-3_text">
             <div class="container check" data-animation="animate__fadeIn">
                 <img src="assets/images/iso.svg" class="d-none d-lg-block iso" alt="">
@@ -292,7 +309,7 @@
         </div>
     </section>
 
-    <div class="modulo6" id="mundo">
+    <div class="modulo6 mark-nav" id="mundo">
         <div class="container">
             <img src="assets/images/iso.svg" class="d-block ml-auto mr-auto mb-3 check" data-animation="animate__fadeIn" alt="">
             <h2 class="text-center check" data-animation="animate__fadeIn">Más de <b>600.000 ventas</b> procesadas en más de 10 canales <br> de ventas presentes en <b>Argentina, Uruguay y México</b>
@@ -305,13 +322,15 @@
 
             <div class="row  d-none d-lg-block">
                 <div class="col-9 m-auto">
-                    <div class="logoslider check" data-animation="animate__fadeIn">
+                    <div class="logoslider owl-carousel">
                         <img src="assets/images/mercado-libre.svg" class="img-fluid" alt="">
-                        <img src="assets/images/amazon.svg" class="img-fluid" alt=""> <img src="assets/images/dafiti.svg" class="img-fluid" alt="">
+                        <img src="assets/images/amazon.svg" class="img-fluid" alt="">
+                        <img src="assets/images/dafiti.svg" class="img-fluid" alt="">
                         <img src="assets/images/shopify.svg" class="img-fluid" alt="">
-
                         <img src="assets/images/OpenCart_logo.svg" class="img-fluid" alt="">
-                        </ul>
+                        <img src="assets/images/tiendanube.svg" class="img-fluid" alt="">
+                        <img src="assets/images/woocommerce.svg" class="img-fluid" alt="">
+                        <img src="assets/images/magento.svg" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -319,7 +338,7 @@
         </div>
     </div>
 
-    <section class="contacto" id="contacto">
+    <section class="contacto mark-nav" id="contacto">
         <div class="bg-color"></div>
         <div class="container">
             <div class="row">
@@ -455,6 +474,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <!--plugins-->
 <script type="text/javascript" src="assets/js/main.js"></script>
 <script type="text/javascript" src="assets/js/form.js"></script>
